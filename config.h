@@ -90,7 +90,7 @@ static Key keys[] = {
     { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]}  },
     { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]}  },
     { MODKEY,                       XK_d,      setlayout,      {.v = &layouts[2]}  },
-    { MODKEY,                       XK_c,      setlayout,      {.v = &layouts[3]}  },
+    { MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[3]}  },
     { MODKEY,                       XK_0,      view,           {.ui = ~0 }  },
     { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 }  },
     { 0, XF86XK_AudioMute,      spawn,      SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)")   },
@@ -103,8 +103,8 @@ static Key keys[] = {
     { 0, XF86XK_AudioStop,      spawn,      SHCMD("mpc stop")   },
     { 0, XF86XK_AudioRewind,    spawn,      SHCMD("mpc seek -10")   },
     { 0, XF86XK_AudioForward,   spawn,      SHCMD("mpc seek +10")   },
-    { 0, XF86XK_MonBrightnessUp,    spawn,      SHCMD("xbacklight -inc 15")  },
-    { 0, XF86XK_MonBrightnessDown,  spawn,      SHCMD("xbacklight -dec 15")  },
+    { 0, XF86XK_MonBrightnessUp,    spawn,      SHCMD("light -A 5")  },
+    { 0, XF86XK_MonBrightnessDown,  spawn,      SHCMD("light -U 5")  },
     TAGKEYS(                        XK_1,                      0 )
         TAGKEYS(                        XK_2,                      1 )
         TAGKEYS(                        XK_3,                      2 )
